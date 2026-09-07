@@ -1,0 +1,63 @@
+{
+  "brand": {
+    "name": "Burger Lab",
+    "tagline": "Burgers & lomos - experimental recipes",
+    "phone": "2657-560516",
+    "instagram": "burger_lab"
+  },
+  "currency": "ARS",
+  "categories": [
+    {
+      "name": "Burgers",
+      "items": [
+        { "id": "fusion-alpha", "name": "Fusion Alpha", "description": "Triple medallón smash (70 gr), triple queso cheddar, cebolla caramelizada, tomate y salsa quántica.", "price": 18000, "image": "assets/fusion-alpha.png" },
+        { "id": "fusion-x", "name": "Fusion X", "description": "Doble medallón smash (90 gr), doble cheddar, cebolla caramelizada, morrón asado, salsa Lab y pan de papa.", "price": 16000, "image": "assets/fusion-x.png" },
+        { "id": "doble-helice", "name": "Doble Hélice", "description": "Doble medallón smash (80 gr), doble queso cheddar, cebolla crispy, doble bacon, huevo frito y salsa quántica.", "price": 16000, "image": "assets/doble-helice.png" },
+        { "id": "lab-special", "name": "Lab Special", "description": "Un medallón smash (120 gr), queso cheddar, cebolla caramelizada, bacon y salsa Lab Secret (mayonesa, mostaza y ketchup).", "price": 15000, "image": "assets/lab-special.png" },
+        { "id": "cheese-lab", "name": "Cheese Lab", "description": "Medallón smash (100 gr), doble cheddar, cebolla caramelizada, mayonesa y pan de papa.", "price": 10000, "image": "assets/cheese-lab.png" },
+        { "id": "golden-burger", "name": "Golden Burger", "description": "Doble medallón smash (80 gr) envuelto en cheddar, cebolla caramelizada y salsa Lab Secret.", "price": 17000, "image": "assets/golden-burger.png" },
+        { "id": "burger-classic", "name": "Burger Classic", "description": "Medallón smash (100 gr), lechuga, tomate, huevo, jamón, queso tybo y mayonesa.", "price": 13000, "image": "assets/burger-classic.png" }
+      ],
+      "includes": "Todas las burgers llevan fritas."
+    },
+    {
+      "name": "Lomos",
+      "items": [
+        { "id": "lomo-quantum", "name": "Lomo Quantum", "description": "Lomo, queso cheddar, jamón, huevo, morrones asados y salsa quántica.", "price": 17000, "image": "assets/lomo-quantum.png" },
+        { "id": "lomo-neon", "name": "Lomo Neon", "description": "Lomo, queso cheddar, lechuga, huevo, bacon y cebolla caramelizada.", "price": 17000, "image": "assets/lomo-neon.png" },
+        { "id": "lomo-classic", "name": "Lomo Classic", "description": "Lomo, lechuga, tomate, huevo, jamón, queso tybo y mayonesa.", "price": 15000, "image": "assets/lomo-classic.png" }
+      ],
+      "includes": "Todos los lomos llevan papa."
+    },
+    {
+      "name": "Combos",
+      "items": [
+        { "id": "combo-gran-duo", "name": "Combo Gran Dúo", "description": "2 burgers Doble Hélice con papas.", "price": 30000, "image": "assets/combo-gran-duo.png" },
+        { "id": "combo-colision", "name": "Combo Colisión", "description": "2 lomos Classic con papas.", "price": 28000, "image": "assets/combo-colision.png" },
+        { "id": "combo-doble-test", "name": "Combo Doble Test", "description": "2 Burger Classic con papas.", "price": 24000, "image": "assets/combo-doble-test.png" }
+      ],
+      "includes": "Todos los combos llevan fritas."
+    },
+    {
+      "name": "Papas",
+      "items": [
+        { "id": "papas-classic", "name": "Papas Classic", "description": "Caja de papas.", "price": 12000, "image": "assets/papas-classic.png" },
+        { "id": "papas-fusion", "name": "Papas Fusion", "description": "Caja de papas con cheddar.", "price": 13000, "image": "assets/papas-fusion.png" }
+      ]
+    },
+    {
+      "name": "Salsas",
+      "items": [
+        { "id": "salsa-lab-secret", "name": "Salsa Lab Secret", "description": "Mayonesa, mostaza y ketchup.", "price": null, "image": "assets/salsa-lab-secret.png" },
+        { "id": "salsa-blue", "name": "Salsa Blue", "description": "Queso crema, queso azul (roquefort), pimienta negra, nuez moscada y leche.", "price": null, "image": "assets/salsa-blue.png" },
+        { "id": "salsa-quantica", "name": "Salsa Quántica", "description": "Mayonesa, apio y ajo.", "price": null, "image": "assets/salsa-quantica.png" }
+      ]
+    }
+  ],
+  "addOns": [
+    { "name": "Cheddar", "price": 1000, "appliesTo": ["burgers", "lomos"] },
+    { "name": "Medallón de carne", "price": 3000, "appliesTo": ["burgers"] },
+    { "name": "Carne", "price": 4000, "appliesTo": ["lomos"] },
+    { "name": "Huevo frito", "price": 500, "appliesTo": ["burgers", "lomos"] }
+  ]
+}

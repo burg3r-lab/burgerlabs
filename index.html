@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Burger Lab: burgers, lomos, combos, papas y salsas." />
+  <title>Burger Lab | Burgers & Lomos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="logo-overrides.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand-mark" href="#top" aria-label="Burger Lab">
+      <img src="assets/burger-lab-logo.png" alt="Burger Lab - Burgers & Lomos" />
+    </a>
+    <button class="cart-button" id="open-cart" type="button" aria-label="Abrir carrito">
+      <span class="cart-icon">🛒</span>
+      <span>Mi pedido</span>
+      <strong id="cart-count">0</strong>
+    </button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">PEDÍ PARA LLEVAR</p>
+        <h1>TAKE<br><span>AWAY</span></h1>
+        <p class="hero-text">Llevá Burger Lab a tu casa.</p>
+        <a class="primary-button" href="#menu">EXPLORAR MENÚ <span>↓</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <img class="hero-logo" src="assets/burger-lab-logo.png" alt="">
+        <div class="formula formula-one">E = MC²</div>
+        <div class="formula formula-two">SMASH + 🔥</div>
+      </div>
+    </section>
+
+    <section class="menu-section" id="menu">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">EL EXPERIMENTO EMPIEZA ACÁ</p>
+          <h2>Elegí tu<br><span>combinación.</span></h2>
+        </div>
+        <div class="search-wrap">
+          <label for="search">Buscar en el menú</label>
+          <input id="search" type="search" placeholder="¿Qué te tienta?" autocomplete="off" />
+        </div>
+      </div>
+      <nav class="category-nav" id="category-nav" aria-label="Categorías del menú"></nav>
+      <div id="menu-grid" class="menu-grid" aria-live="polite"></div>
+      <p id="empty-state" class="empty-state" hidden>No encontramos productos con esa búsqueda.</p>
+    </section>
+
+    <section class="info-strip">
+      <div><span>📲</span><strong>Pedí por WhatsApp</strong><small>Te respondemos rápido</small></div>
+      <div><span>🍟</span><strong>Todas las burgers llevan fritas</strong><small>Y todos los lomos llevan papa</small></div>
+      <div><span>🧪</span><strong>Recetas experimentales</strong><small>Hechas para salir de lo común</small></div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contacto">
+    <div><span class="footer-logo">BURGER LAB</span><span>Experimental recipes</span></div>
+    <a href="https://instagram.com/burger_lab" target="_blank" rel="noreferrer">@burger_lab</a>
+    <a href="https://wa.me/542657560516" target="_blank" rel="noreferrer">2657-560516</a>
+  </footer>
+
+  <div class="cart-overlay" id="cart-overlay" hidden></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Tu pedido" aria-hidden="true">
+    <div class="cart-head">
+      <div><p class="eyebrow">RESULTADO DEL EXPERIMENTO</p><h2>Tu pedido</h2></div>
+      <button id="close-cart" class="icon-button" type="button" aria-label="Cerrar carrito">×</button>
+    </div>
+    <div id="cart-items" class="cart-items"></div>
+    <div id="cart-empty" class="cart-empty">Todavía no agregaste nada.<br>El laboratorio te espera.</div>
+    <div class="cart-footer">
+      <div class="cart-total"><span>Total estimado</span><strong id="cart-total">$0</strong></div>
+      <div class="payment-box">
+        <strong>Prueba de pago por transferencia</strong>
+        <p>Transferí el total a:</p>
+        <p class="payment-alias"><span>Alias: <b id="payment-alias">rey.ju50</b></span><button id="copy-alias" type="button">Copiar</button></p>
+        <small>Titular: Juan Ramon Reyes. Luego enviá el comprobante por WhatsApp.</small>
+      </div>
+      <a id="whatsapp-order" class="primary-button whatsapp-button disabled" href="#" target="_blank" rel="noreferrer" aria-disabled="true">Pedir por WhatsApp <span>↗</span></a>
+      <small>El pedido se confirma por WhatsApp.</small>
+    </div>
+  </aside>
+
+  <template id="product-template">
+    <article class="product-card">
+      <div class="product-image-wrap"><img class="product-image" alt="" loading="lazy"><span class="product-badge" hidden></span></div>
+      <div class="product-info"><div class="product-topline"><h3></h3><strong class="product-price"></strong></div><p class="product-description"></p><button class="add-button" type="button">Agregar <span>+</span></button></div>
+    </article>
+  </template>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
